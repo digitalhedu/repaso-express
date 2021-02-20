@@ -1,0 +1,129 @@
+body{
+    background: var(--color-blue);
+    padding-top: 20vh;
+    font-family: var(--font-family);
+}
+
+.list-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.item{
+    background-color: #fff;
+    width: 75vw;
+    height: 25vh;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.item__header{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 25%;
+
+}
+.item__header__title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.item_header_state{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    display: block;
+}
+
+.to-do{
+    background-color: var(--color-todo);
+}
+
+.in-progress{
+    background-color: var(--color-in-progress);
+}
+
+.done{
+    background-color: var(--color-done);
+}
+
+.item__body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #efefef;
+    height: 75%;
+}
+.item_body__description{
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item__user{
+    display: flex;
+    justify-content: space-around;
+    height: 3rem;
+    align-items: center;
+    padding: 0 .25rem;
+    background-color: var(--color-orange);
+}
+.user__avatar{
+    height: 2rem;
+    width: 2rem;
+    font-size: 1rem;
+    background-color: var(--color-honney);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 2rem;
+
+}
+
+.user__figure{
+
+}
+
+.user__image{
+
+}
+
+.user__name{
+    font-weight: 700;
+    text-transform: uppercase;
+    flex: 1 0 auto;
+    height: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    padding: 0rem 0.25rem;
+}
+
+@media (min-width: 768px){
+    .list-item{
+        justify-content: space-between;
+    }
+    .item{
+        width: 50vw;
+    }
+}
+
+@media (min-width: 1024px){
+    .list-item{
+        justify-content: space-around;
+    }
+    
+    .item{
+        width: 20vw;
+    }
+}

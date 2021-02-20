@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "name":"Eduardo Virgilio",
+        "avatar": {
+            "type":"text",
+            "content": "EV"
+        },
+        "rols":[1]
+    },
+    {
+        "id":2,
+        "name":"David Iomini",
+        "avatar": {
+            "type":"text",
+            "content": "DI"
+        },
+        "rols":[2,3]
+    }
+]

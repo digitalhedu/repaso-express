@@ -1,0 +1,100 @@
+@import url("variables.css");
+/* Header Mobile  */
+
+header{
+    background: var(--color-prussian); 
+    display: flex;
+    flex-direction: column;
+    padding: .25rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+header nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+header nav ul li{
+    flex: 1 0 auto;
+    display: flex;
+    margin: 0rem .2rem;
+}
+header nav ul li a{
+    font-family: var(--font-family);
+    text-decoration: none;
+    color: var(--color-blue);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    flex: 1 0 auto;
+    border: .15rem solid var(--color-blue);
+    padding: .2rem;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+header nav ul li a:hover{
+    background: var(--color-blue);
+    color: snow;
+}
+
+header form{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header form label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header form label input{
+    border: none;
+    outline: none;
+    height: 1.5rem;
+    font-size: 1rem;
+    color: var(--color-blue);
+    background-color: snow;
+    padding-left: .2rem;
+    font-family: var(--font-family);
+}
+header form label input:focus{
+    border: none;
+    outline: none;
+    background-color: var(--color-blue);
+    color: snow;
+}
+header form label input::placeholder{
+    opacity: 1;
+    color: #000;
+    text-transform: uppercase;
+}
+header form label input::-webkit-input-placeholder{
+    opacity: 1;
+    color: #000;
+    text-transform: uppercase;
+}
+header form label button{
+    border: none;
+    outline: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: var(--color-blue);
+    color: snow;
+}
+header form label button:hover{
+    color: var(--color-blue);
+    background-color: snow;
+}

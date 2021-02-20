@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head") %> 
+<body>
+    
+    <%- include("partials/header") %>
+
+    <ul class="list-item">
+        <% tasks.forEach(task => { %>
+            <li class="item">
+                <section class="item__header">
+                    <h2 class="item__header__title"><%= task.title %> <span class="item_header_state <%= task.state.label.replace(' ', '-')%> "></span></h2>
+                </section>
+                <section class="item__body">
+                    <p class="item_body__description"><%= task.description%> </p>
+                    <section class="item__user">
+                        <% if (task.user.avatar.type == "text") { %>
+                            <span class="user__avatar">
+                                <%= task.user.avatar.content %> 
+                            </span>
+                        <% } else { %>
+                            <figure class="user__figure">
+                                <img class="user__image" src="/assets/image/<%= task.user.avatar.content %>" alt="Image Profile <%= task.user.name %>">
+                            </figure>     
+                        <% } %>
+                        <h3 class="user__name"><%= task.user.name %></h3>
+                    </section>
+                </section>
+            </li>
+        <% }) %>
+    </ul>
+
+</body>
+</html>

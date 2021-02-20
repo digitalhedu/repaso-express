@@ -1,0 +1,11 @@
+:root{
+    --color-blue: #219EBC;
+    --color-prussian: #023047;
+    --color-light-blue: #8ECAE6;
+    --color-honney: #FFB703;
+    --color-orange: #FB8500;
+    --color-done: #8BC34A ;
+    --color-in-progress: #FFEB3B ; 
+    --color-todo: #00BCD4;
+    --font-family: 'Dosis',sans-serif;
+}

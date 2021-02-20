@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "label":"in progress"
+    },
+    {
+        "id":2,
+        "label":"to do"
+    },
+    {
+        "id":3,
+        "label":"done"
+    }
+]

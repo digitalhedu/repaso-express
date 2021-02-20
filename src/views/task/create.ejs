@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %> 
+<body>
+    
+    <%- include("../partials/header") %>
+
+    <main class="create">
+    
+        <form action="/task/save" method="post">
+            
+            <label for="title"><input name="title" placeholder="title" type="text"></label>
+            <label for="description"><input name="description" placeholder="description" type="text"></label>
+            <select name="state" id="state">
+                <% states.forEach(state => { %>
+                    <option value="<%= state.id %>"><%= state.label %> </option>
+                <% }) %>
+            </select>
+            <select name="user" id="user">
+                <% users.forEach(user => { %>
+                    <option value="<%= user.id %>"><%= user.name %> </option>
+                <% }) %>
+            </select>
+    
+            <button type="submit">ENVIAR</button>
+        </form>
+    </main>
+                
+</body>
+</html>

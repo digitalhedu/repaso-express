@@ -1,0 +1,35 @@
+body{
+    background: var(--color-blue);
+    padding-top: 20vh;
+    font-family: var(--font-family);
+}
+
+.create{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.create form{
+    background-color: var(--color-prussian);
+    width: 25vw;
+    height: 25vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.create label{
+    width: 50%;
+}
+
+.create input{ 
+    font-size: 1rem; 
+}
+
+.create select{ 
+    font-size: 1rem; 
+    margin-bottom: 1rem; 
+    margin-left: .25rem;
+}

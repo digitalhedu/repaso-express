@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Hacer la cena",
+        "description": "Poner las milangas en el horno",
+        "state": 2,
+        "user": 1
+    },
+    {
+        "id": 2,
+        "title": "Hacer la cama",
+        "description": "Poner las sabanas a lavar",
+        "state": 3,
+        "user": 2
+    },
+    {
+        "title": "Lavar Sabanas",
+        "description": "llevar al lavadero las sabanas",
+        "state": "2",
+        "user": "1",
+        "id": 3
+    },
+    {
+        "title": "Preparar las Milangas",
+        "description": "Comprar carne",
+        "state": "1",
+        "user": "2",
+        "id": 4
+    }
+]
