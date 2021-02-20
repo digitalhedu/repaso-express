@@ -1,6 +1,7 @@
 const dbtask = require("../database/models/task");
 const dbuser = require("../database/models/user");
 const dbstate = require("../database/models/state");
+const { on } = require("nodemon");
 
 module.exports = {
     show:(req,res) =>{
@@ -22,7 +23,23 @@ module.exports = {
         dbtask.write(allTask);
         return res.redirect("/");
     },
-    edit: (req,res) => res.send("Edit One Task"),
-    update: (req,res) => res.send("Update Tasks"),
+    edit: (req,res) => {
+        let task = dbtask.one(req.params.id);
+        task.user = dbuser.one(task.user);
+        task.state = dbstate.one(task.state);
+        res.render("task/create",{title:"Edit",styles:["master","edit"],users:dbuser.list(),states: dbstate.list(), task: task}),
+    },
+    update: (req,res) => {
+        let task = dbtask.one(req.params.id);
+        let allTask = dbtask.list();
+        let updatedTask = allTask.map( oneTask =>{
+            if(oneTask.id == task.id){
+                oneTask = {...req.body,id:task.id}
+            }
+            return oneTask
+        })
+        dbtask.write(updatedTask);
+        return res.redirect("/");
+    },
     delete: (req,res) => res.send("Delete One Task")
 }    
