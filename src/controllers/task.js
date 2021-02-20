@@ -41,5 +41,14 @@ module.exports = {
         dbtask.write(updatedTask);
         return res.redirect("/");
     },
-    delete: (req,res) => res.send("Delete One Task")
+    delete: (req,res) => {
+        let allTask = dbtask.list();
+
+        let filteredTask = allTask.filter(task => task.id != req.body.id )
+        
+        dbtask.write(filteredTask);
+        
+        return res.redirect("/");
+        
+    }
 }    
